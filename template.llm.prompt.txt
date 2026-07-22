@@ -1,0 +1,18 @@
+# import os
+# from dotenv import load_dotenv
+# load_dotenv()
+
+prompt_template_str = """
+Votre tâche est de m'expliquer le concept de **{concept}** de façon :
+
+1. Claire et intuitive
+2. Concise (en moins de 100 mots)
+3. Adaptée à mon profil
+
+Voici ce que vous savez sur moi :
+- Profil : étudiant en école centrale, parcours data science et développement Python
+- Intérêts : développement web, systèmes d'exploitation, IA
+- Niveau : intermédiaire en Python
+
+La personnalisation doit être subtile et naturelle.
+"""
