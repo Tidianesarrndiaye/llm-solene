@@ -4,3 +4,9 @@
 
 # LangGraph
 .langgraph_api/
+
+
+# environnement local variable et file de config
+.env
+.vscode/
+.idea/
