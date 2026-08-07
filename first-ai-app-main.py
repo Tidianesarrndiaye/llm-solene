@@ -31,7 +31,22 @@ prompt_template = PromptTemplate.from_template(prompt_template_str)
 #prompt = prompt_template.format(concept=concept)
 
 # Créer l'interface du modèle
+"""# Pour Mistral (recommandé si tu as une clé Mistral dans .env)
+model = init_chat_model("mistral-tiny", model_provider="mistralai")
+
+# Pour Groq (rapide et gratuit)
+model = init_chat_model("llama3-8b-8192", model_provider="groq")
+
+# Pour Google
+model = init_chat_model("gemini-1.5-flash", model_provider="google_genai")
+
+# Pour OpenAI
 model = init_chat_model("gpt-4o-mini", model_provider="openai")
+
+  Returns:
+      _type_: _description_
+  """
+model = init_chat_model("mistral-tiny", model_provider="mistralai")
 
 # Appeler le modèle avec le prompt
 #response = model.invoke(prompt)
@@ -59,5 +74,5 @@ demo = gr.Interface(
     description="Entrez un terme pour obtenir une explication adaptée à votre profil"
 )
 
-# demo.launch()
+demo.launch()
 
